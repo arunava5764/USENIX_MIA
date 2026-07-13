@@ -3,7 +3,7 @@
 This repository contains the artifact for the paper:
 
 **_GhostViT: Revealing and Exploiting Attention Kernel Leakage on GPUs for Side-channel-based Membership Inference in Vision Transformers_**  
-*Submitted to the Network and Distributed System Security (NDSS) Symposium (NDSS 2027).*
+*Submitted to the 36th USENIX Security Symposium (USENIX Security'27).*
 
 This artifact provides a proof-of-concept implementation of our proposed GPU side-channel attack model. The included Jupyter Notebook demonstrates how GPU attention-kernel performance counters can be used to perform Membership Inference (MI) attacks against Vision Transformer (ViT) models.
 
