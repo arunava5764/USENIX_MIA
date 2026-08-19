@@ -1,4 +1,4 @@
-# VIT_MIA Artifact — GhostViT
+# VIT_MIA Artifact
 
 This repository contains the artifact for the paper:
 
