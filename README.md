@@ -1,4 +1,4 @@
-# VIT_MIA Artifact
+# USENIX 2027 Cycle 1 Artifact
 
 This repository contains the artifact for the paper:
 
