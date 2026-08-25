@@ -5,19 +5,19 @@ This repository contains the artifact for the paper:
 **_Local Data, Global Attention: GPU Side-Channel Based Membership Inference Attack on Privacy-Preserving Vision Transformers_**  
 *Submitted to the 36th USENIX Security Symposium (USENIX Security'27).*
 
-This artifact provides a proof-of-concept implementation of our proposed GPU side-channel attack model. The included Jupyter Notebook demonstrates how GPU attention-kernel performance counters can be used to perform Membership Inference (MI) attacks against Vision Transformer (ViT) models.
+This artifact provides a proof-of-concept implementation of our proposed GPU side-channel attack model. The included Jupyter Notebooks demonstrate how GPU attention-kernel performance counters can be used to perform Membership Inference attacks (MIA) against Vision Transformer (ViT) models.
 
-The notebook reproduces the experimental results reported in **Table 4** of the paper, showing that our attack identifies Google ViT-Base model training samples with **100% accuracy** on NVIDIA Ampere architecture GPUs when fine-tuned on **GTSRB**.
+This repository reproduces the experimental results reported in **Tables 4, 5, 6, 7, 8** of the paper, showing that our attack identifies ViT-Base and DeiT-Base models' training samples with competitive accuracy across three different NVIDIA GPU architectures. Also the **Proposed Mitigation** folder contains the results against our newly introduced temperature scaling-based mitigation approach.
 
 ---
 
 ## 📦 Repository Contents
 
-- **`ViT_membership_inference_gtsrb_POC.ipynb`** — Main proof-of-concept notebook  
-  - Loads shadow model traces  
-  - Trains Membership Inference classifier  
-  - Evaluates attack on target model traces  
-  - Reproduces Table 4 results
+-  **`Table_X...`** — X: Table number in the paper. Each  notebook in the folder -
+  -- Loads shadow model traces  
+  -- Trains Membership Inference classifier  
+  -- Evaluates attack on target model traces  
+  -- Reproduces Table 4 results
 - Utility code and processing logic (embedded in the notebook)
 
 ---
@@ -28,19 +28,9 @@ Both the shadow model traces and target model traces used in the paper can be do
 
 👉 **Dataset link:** https://zenodo.org/records/17661292
 
-After downloading:
-
-1. Extract the ZIP file.
-2. Place the extracted directory somewhere accessible.
-3. Note the full path to this directory, it will be used inside the notebook.
+After downloading, extract the ZIP files inside the folder with the match initial of the downloaded data file.
 
 ---
-
-## 🛠️ System Requirements
-
-### Hardware
-- NVIDIA **Ampere** GPU (e.g., A100, RTX 3080/3090/3070) and post Ampere Generation GPUs
-- CUPTI compatible NVIDIA driver
 
 ### Software
 - Python **3.10+**
@@ -56,7 +46,23 @@ After downloading:
 2. Open the notebook:  Set the Dataset Path. Inside the notebook, locate the following placeholder in the 2nd code block:
 
 ```python
-"path to the directory"
+...........
+for i in range(1,101):
+    temp1=[]
+    for j in range(10):
+        path='./mem_csv_vit_base_gtsrb/report'+str(j)+'_'+str(i)+'.csv' //Shadow Model Traces
+        data=pd.read_csv(path)
+        temp1.append(data)
+    vit_base_data.append(temp1)
+
+for i in range(1,31):
+    temp1=[]
+    for j in range(10):
+        path='./mem_csv_vit_base_gtsrb_test/report'+str(j)+'_'+str(i)+'.csv' //Target Model Traces
+        data=pd.read_csv(path)
+        temp1.append(data)
+    vit_base_data_test.append(temp1)
+.............
 ```
 3. Replace it with the actual path where you extracted the dataset.
 4. Run the Notebook: From the Jupyter interface, select: Kernel → Restart & Run All. The notebook will automatically
