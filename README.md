@@ -17,7 +17,7 @@ This repository reproduces the experimental results reported in **Tables 4, 5, 6
   - Loads shadow model traces
   - Trains a Membership Inference classifier
   - Evaluates the attack on target model traces
-  - Reproduces the corresponding results reported in the paper
+  - Reproduces the corresponding results of the table **X** reported in the paper
 - Utility code and processing logic (embedded in the notebook)
 
 ---
