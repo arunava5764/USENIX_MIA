@@ -13,7 +13,7 @@ This repository reproduces the experimental results reported in **Tables 4, 5, 6
 
 ## 📦 Repository Contents
 
--  **`Table_X...`** — X: Table number in the paper. Each  notebook in the folder -
+-  **`Table_X...`** — X: Table number in the paper. Each  notebook in the folder:
   -- Loads shadow model traces  
   -- Trains Membership Inference classifier  
   -- Evaluates attack on target model traces  
