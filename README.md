@@ -33,7 +33,7 @@ After downloading, extract the ZIP files inside the folder with the match initia
 ---
 
 ### Software
-- Python **3.10+**
+- Python **3.10.12+**
 - Jupyter Notebook / JupyterLab
 - Standard Python ML/data libraries (NumPy, Scikit-learn, Pandas, Matplotlib, etc.)
 - CUDA + CUPTI (only needed if collecting *new* traces; not required for running the provided ones)
