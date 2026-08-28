@@ -26,7 +26,7 @@ This repository reproduces the experimental results reported in **Tables 4, 5, 6
 
 Both the shadow model traces and target model traces used in the paper can be downloaded from Zenodo:
 
-👉 **Dataset link:** https://zenodo.org/records/17661292
+👉 **Dataset link:** [https://zenodo.org/records/21994193](https://zenodo.org/records/21994193)
 
 After downloading, extract the ZIP files inside the folder with the match initial of the downloaded data file.
 
