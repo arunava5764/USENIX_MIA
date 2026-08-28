@@ -13,11 +13,11 @@ This repository reproduces the experimental results reported in **Tables 4, 5, 6
 
 ## 📦 Repository Contents
 
--  **`Table_X...`** — X: Table number in the paper. Each  notebook in the folder:
-  -- Loads shadow model traces  
-  -- Trains Membership Inference classifier  
-  -- Evaluates attack on target model traces  
-  -- Reproduces Table 4 results
+- **`Table_X...`** — X denotes the table number in the paper. Each notebook in the folder:
+  - Loads shadow model traces
+  - Trains a Membership Inference classifier
+  - Evaluates the attack on target model traces
+  - Reproduces the corresponding results reported in the paper
 - Utility code and processing logic (embedded in the notebook)
 
 ---
